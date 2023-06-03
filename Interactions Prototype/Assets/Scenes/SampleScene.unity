@@ -1388,7 +1388,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 64
-  jumpHeight: 2
+  jumpHeight: 1.1
 --- !u!1001 &340368722
 PrefabInstance:
   m_ObjectHideFlags: 0
