@@ -12,4 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6906ad040c005644c8f1beefcee3d957, type: 3}
   m_Name: D2
   m_EditorClassIdentifier: 
-  nodes: []
+  nodes:
+  - uniqueID: 
+    text: Bye Red
+    children: []
+    position:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
