@@ -2,12 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 
 namespace RPG.Dialogue
 {    
     [CreateAssetMenu(fileName = " New Dialogue", menuName = "Dialogue", order = 0)]
-    public class Dialogue : ScriptableObject
+    public class Dialogue : ScriptableObject,ISerializationCallbackReceiver
         {
             [SerializeField] 
              List<DialogueNode> nodes = new List<DialogueNode>();
@@ -36,7 +37,7 @@ namespace RPG.Dialogue
 
             {
 
-                nodeLookup[node.uniqueID] = node;
+                nodeLookup[node.name] = node;
 
             }
 
@@ -72,12 +73,13 @@ namespace RPG.Dialogue
 
             DialogueNode newNode = CreateInstance<DialogueNode>();
 
-            newNode.uniqueID = Guid.NewGuid().ToString();
+            newNode.name = Guid.NewGuid().ToString();
+            Undo.RegisterCreatedObjectUndo(newNode,"Created Dialogue Node");
 
-            if(parent!=null) parent.children.Add(newNode.uniqueID);
+            if(parent!=null) parent.children.Add(newNode.name);
 
             nodes.Add(newNode);
-
+            
             OnValidate();
 
         }
@@ -85,6 +87,7 @@ namespace RPG.Dialogue
         public void DeleteNode(DialogueNode nodeToDelete)
         {
             nodes.Remove(nodeToDelete);
+            Undo.DestroyObjectImmediate(nodeToDelete);
             OnValidate();
             CleanDanglingChildren(nodeToDelete);
 
@@ -94,8 +97,26 @@ namespace RPG.Dialogue
         {
             foreach (DialogueNode node in GetAllNodes())
             {
-                node.children.Remove(nodeToDelete.uniqueID);
+                node.children.Remove(nodeToDelete.name);
             }
+        }
+
+        public void OnBeforeSerialize()
+        {
+            if( AssetDatabase.GetAssetPath(this) != ""){
+                foreach (DialogueNode node in GetAllNodes())
+                {
+                    if(AssetDatabase.GetAssetPath(node) == ""){
+                        AssetDatabase.AddObjectToAsset(node, this);
+
+                    }
+                }
+            }
+        }
+
+        public void OnAfterDeserialize()
+        {
+            
         }
     }
 
