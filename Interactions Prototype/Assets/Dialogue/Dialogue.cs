@@ -15,25 +15,32 @@ namespace RPG.Dialogue
 
             Dictionary<string, DialogueNode> nodeLookup = new Dictionary<string, DialogueNode>();
 
-#if UNITY_EDITOR
-            void Awake() 
+
+            void Awake()
+
+        {
+
+            OnValidate();
+
+        }
+
+
+
+        private void OnValidate()
+
+        {
+
+            nodeLookup.Clear();
+
+            foreach (DialogueNode node in GetAllNodes())
+
             {
-                if(nodes.Count == 0)
-                {
-                 DialogueNode rootNode = new DialogueNode();
-                rootNode.uniqueID = Guid.NewGuid().ToString();
-                nodes.Add(rootNode);
-                }
+
+                nodeLookup[node.uniqueID] = node;
+
             }
-#endif
-    private void OnValidate() 
-    {
-    nodeLookup.Clear();
-    foreach (DialogueNode node in GetAllNodes())
-    {
-        nodeLookup[node.uniqueID] = node;
-    }
-    }   
+
+        }
     public IEnumerable<DialogueNode> GetAllNodes()
     {
         return nodes;
@@ -59,13 +66,20 @@ namespace RPG.Dialogue
             
         }
 
-        public void CreateNode(DialogueNode parent)
+          public void CreateNode(DialogueNode parent)
+
         {
-            DialogueNode newNode = new DialogueNode();
+
+            DialogueNode newNode = CreateInstance<DialogueNode>();
+
             newNode.uniqueID = Guid.NewGuid().ToString();
-            parent.children.Add(newNode.uniqueID);
+
+            if(parent!=null) parent.children.Add(newNode.uniqueID);
+
             nodes.Add(newNode);
+
             OnValidate();
+
         }
 
         public void DeleteNode(DialogueNode nodeToDelete)

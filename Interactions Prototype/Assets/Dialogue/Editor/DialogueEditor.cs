@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEditor.Callbacks;
 using UnityEditor;
 using System;
+using System.Linq;
 
 namespace RPG.Dialogue.Editor
 {    
@@ -71,48 +72,103 @@ namespace RPG.Dialogue.Editor
         }
     }
 
-    void OnGUI() 
-    {
-        if (selectedDialogue == null)
-    {
-        EditorGUILayout.LabelField("No Dialogue Selected");
-    }
-    else
+    void OnGUI()
+
         {
-        ProcessEvents();
 
-        scrollPosition = EditorGUILayout.BeginScrollView(scrollPosition);
-        
-        Rect canvas = GUILayoutUtility.GetRect(canvasSize,canvasSize);
-        Texture2D backgroundText = Resources.Load("background") as Texture2D;
-        Rect textCoords = new Rect(0,0, canvasSize / backgroundSize, canvasSize / backgroundSize);
-        GUI.DrawTextureWithTexCoords(canvas, backgroundText, textCoords);
-        
-        foreach (DialogueNode node in selectedDialogue.GetAllNodes())
-                {                   
-                    DrawConnections(node);
-                }
-        foreach (DialogueNode node in selectedDialogue.GetAllNodes())
-                {
-                    DrawNode(node);                    
-                }  
+            if (selectedDialogue == null)
 
-                EditorGUILayout.EndScrollView();
-                
-                if (creatingNode !=null)
-                {
-                    Undo.RecordObject(selectedDialogue, "Added Dialogue Node");
-                    selectedDialogue.CreateNode(creatingNode);
-                    creatingNode = null;
-                }    
-                if(deletingNode !=null)
-                {
-                    Undo.RecordObject(selectedDialogue, "Deleted Dialogue Node");
-                    selectedDialogue.DeleteNode(deletingNode);
-                    deletingNode = null;
-                    
-                }          
-        }      
+            {
+
+                EditorGUILayout.LabelField("No Dialogue Selected");
+
+                return;
+
+            }
+
+
+
+            if (selectedDialogue.GetAllNodes().Count() == 0)
+
+            {
+
+                Debug.Log("No Nodes found, creating new node.");
+
+                selectedDialogue.CreateNode(null);
+
+            }
+
+            
+
+            ProcessEvents();
+
+
+
+            scrollPosition = EditorGUILayout.BeginScrollView(scrollPosition);
+
+
+
+            Rect canvas = GUILayoutUtility.GetRect(canvasSize, canvasSize);
+
+            Texture2D backgroundText = Resources.Load("background") as Texture2D;
+
+            Rect textCoords = new Rect(0, 0, canvasSize / backgroundSize, canvasSize / backgroundSize);
+
+            GUI.DrawTextureWithTexCoords(canvas, backgroundText, textCoords);
+
+
+
+            foreach (DialogueNode node in selectedDialogue.GetAllNodes())
+
+            {
+
+                DrawConnections(node);
+
+            }
+
+
+
+            foreach (DialogueNode node in selectedDialogue.GetAllNodes())
+
+            {
+
+                DrawNode(node);
+
+            }
+
+
+
+            EditorGUILayout.EndScrollView();
+
+
+
+            if (creatingNode != null)
+
+            {
+
+                Undo.RecordObject(selectedDialogue, "Added Dialogue Node");
+
+                selectedDialogue.CreateNode(creatingNode);
+
+                creatingNode = null;
+
+            }
+
+
+
+            if (deletingNode != null)
+
+            {
+
+                Undo.RecordObject(selectedDialogue, "Deleted Dialogue Node");
+
+                selectedDialogue.DeleteNode(deletingNode);
+
+                deletingNode = null;
+
+            }
+
+            
                    
     }
 
@@ -125,11 +181,13 @@ namespace RPG.Dialogue.Editor
             if (draggingNode !=null)
             {
                 draggingOffset = draggingNode.rect.position - Event.current.mousePosition;
+                Selection.activeObject = draggingNode;
             }
             else
             {
                 draggingCanvas = true;
                 draggingCanvasOffset = Event.current.mousePosition + scrollPosition;
+                Selection.activeObject = selectedDialogue;
             }
         }
         else if(Event.current.type == EventType.MouseDrag && draggingNode !=null)
