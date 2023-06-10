@@ -16,8 +16,8 @@ MonoBehaviour:
   children: []
   rect:
     serializedVersion: 2
-    x: 1100
-    y: 118
+    x: 952
+    y: 35.999996
     width: 200
     height: 100
   isPlayerSpeaking: 0
@@ -39,8 +39,8 @@ MonoBehaviour:
   - f9106d88-04ba-4565-91e8-b3dbda7d9bfe
   rect:
     serializedVersion: 2
-    x: 600
-    y: 118
+    x: 513
+    y: 130
     width: 200
     height: 100
   isPlayerSpeaking: 0
@@ -62,8 +62,8 @@ MonoBehaviour:
   - 7887fe68-520b-41cd-8792-da3c24823e5b
   rect:
     serializedVersion: 2
-    x: 836
-    y: 116
+    x: 719
+    y: 135
     width: 200
     height: 100
   isPlayerSpeaking: 1
@@ -149,8 +149,8 @@ MonoBehaviour:
   children: []
   rect:
     serializedVersion: 2
-    x: 1100
-    y: 247.99998
+    x: 947
+    y: 216.99998
     width: 200
     height: 100
   isPlayerSpeaking: 0
