@@ -1,0 +1,268 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8938595318539195707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b79069cd76e069a4393c7868e175222c, type: 3}
+  m_Name: 7805a00a-137f-400a-aea5-893ecaf1bd32
+  m_EditorClassIdentifier: 
+  text: Ill be gone before you know it.
+  children:
+  - 2d08a8fa-1b19-4ef4-a139-1063bbb85771
+  rect:
+    serializedVersion: 2
+    x: 767
+    y: 125
+    width: 200
+    height: 100
+  isPlayerSpeaking: 1
+--- !u!114 &-7431178061012457061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b79069cd76e069a4393c7868e175222c, type: 3}
+  m_Name: 9f80f6bd-d0bf-4b44-bcc6-a7279d72beca
+  m_EditorClassIdentifier: 
+  text: Then beware of the forest and caves... they hold dangerous thing.
+  children:
+  - 44df5836-9848-4205-b20b-069607a24ea4
+  rect:
+    serializedVersion: 2
+    x: 994
+    y: 21
+    width: 200
+    height: 100
+  isPlayerSpeaking: 0
+--- !u!114 &-1940680683023577259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b79069cd76e069a4393c7868e175222c, type: 3}
+  m_Name: cc725c00-e4eb-45dd-8d9a-31fac4420659
+  m_EditorClassIdentifier: 
+  text: Hello, are you lost? I have never seen you around.
+  children:
+  - b5af9a03-3bb4-4c44-8c17-2c4a3054e431
+  - b1e839b3-f9d4-486d-8f1a-873ed3d1ac08
+  rect:
+    serializedVersion: 2
+    x: 23
+    y: 92
+    width: 200
+    height: 100
+  isPlayerSpeaking: 0
+--- !u!114 &-684894426874207283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b79069cd76e069a4393c7868e175222c, type: 3}
+  m_Name: 44df5836-9848-4205-b20b-069607a24ea4
+  m_EditorClassIdentifier: 
+  text: Gotcha.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1244
+    y: 21
+    width: 200
+    height: 100
+  isPlayerSpeaking: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6906ad040c005644c8f1beefcee3d957, type: 3}
+  m_Name: FirstContact
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -1940680683023577259}
+  - {fileID: 6206988341289899751}
+  - {fileID: 3541106639784595756}
+  - {fileID: 6002501421965046977}
+  - {fileID: 5408632213901295753}
+  - {fileID: 4896868755001114435}
+  - {fileID: -7431178061012457061}
+  - {fileID: -684894426874207283}
+  - {fileID: -8938595318539195707}
+  - {fileID: 7661537910251360210}
+  - {fileID: 9106476466632263557}
+  newNodeOffset: {x: 250, y: 0}
+--- !u!114 &3541106639784595756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b79069cd76e069a4393c7868e175222c, type: 3}
+  m_Name: b1e839b3-f9d4-486d-8f1a-873ed3d1ac08
+  m_EditorClassIdentifier: 
+  text: Sorry I don't speak with strangers.
+  children:
+  - c8631ece-e4c1-470b-833d-de14dc925710
+  rect:
+    serializedVersion: 2
+    x: 264
+    y: 121
+    width: 200
+    height: 100
+  isPlayerSpeaking: 1
+--- !u!114 &4896868755001114435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b79069cd76e069a4393c7868e175222c, type: 3}
+  m_Name: 90421d53-151d-40a6-8aa7-290bb815cc02
+  m_EditorClassIdentifier: 
+  text: I wish to explore the areas
+  children:
+  - 9f80f6bd-d0bf-4b44-bcc6-a7279d72beca
+  rect:
+    serializedVersion: 2
+    x: 744
+    y: 21
+    width: 200
+    height: 100
+  isPlayerSpeaking: 1
+--- !u!114 &5408632213901295753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b79069cd76e069a4393c7868e175222c, type: 3}
+  m_Name: c8631ece-e4c1-470b-833d-de14dc925710
+  m_EditorClassIdentifier: 
+  text: Serve yourself kid.
+  children:
+  - 6add1d34-43d1-4e83-bf88-56eba00f6492
+  rect:
+    serializedVersion: 2
+    x: 484
+    y: 147
+    width: 200
+    height: 100
+  isPlayerSpeaking: 0
+--- !u!114 &6002501421965046977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b79069cd76e069a4393c7868e175222c, type: 3}
+  m_Name: 49e8ee3f-cf5c-49c9-893d-8cfb013e09f8
+  m_EditorClassIdentifier: 
+  text: I see.. What do you intend to do?
+  children:
+  - 90421d53-151d-40a6-8aa7-290bb815cc02
+  - 7805a00a-137f-400a-aea5-893ecaf1bd32
+  rect:
+    serializedVersion: 2
+    x: 494
+    y: 21
+    width: 200
+    height: 100
+  isPlayerSpeaking: 0
+--- !u!114 &6206988341289899751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b79069cd76e069a4393c7868e175222c, type: 3}
+  m_Name: b5af9a03-3bb4-4c44-8c17-2c4a3054e431
+  m_EditorClassIdentifier: 
+  text: I have always lived here!
+  children:
+  - 49e8ee3f-cf5c-49c9-893d-8cfb013e09f8
+  rect:
+    serializedVersion: 2
+    x: 263
+    y: 29
+    width: 200
+    height: 100
+  isPlayerSpeaking: 1
+--- !u!114 &7661537910251360210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b79069cd76e069a4393c7868e175222c, type: 3}
+  m_Name: 2d08a8fa-1b19-4ef4-a139-1063bbb85771
+  m_EditorClassIdentifier: 
+  text: Serve yourself kid.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 997
+    y: 110
+    width: 200
+    height: 100
+  isPlayerSpeaking: 0
+--- !u!114 &9106476466632263557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b79069cd76e069a4393c7868e175222c, type: 3}
+  m_Name: 6add1d34-43d1-4e83-bf88-56eba00f6492
+  m_EditorClassIdentifier: 
+  text: Bye.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 712
+    y: 241
+    width: 200
+    height: 100
+  isPlayerSpeaking: 1

@@ -169,7 +169,7 @@ MonoBehaviour:
   m_PreferredHeight: 30.1
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
-  m_LayoutPriority: 1
+  m_LayoutPriority: 10
 --- !u!1 &672199871424415722
 GameObject:
   m_ObjectHideFlags: 0
@@ -816,6 +816,7 @@ GameObject:
   - component: {fileID: 5590290983383970899}
   - component: {fileID: 911230208174047159}
   - component: {fileID: 1317598454124651897}
+  - component: {fileID: 3175793725499776221}
   m_Layer: 5
   m_Name: Dialogue
   m_TagString: Untagged
@@ -845,7 +846,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -45.26645}
-  m_SizeDelta: {x: -253.86621, y: 181.4671}
+  m_SizeDelta: {x: -253.86621, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &3313255579692219953
 CanvasRenderer:
@@ -945,3 +946,17 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &3175793725499776221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8973661639541049825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed745459afad59d4cbd79e40b485d5a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AIText: {fileID: 2737755535696120624}
+  nextButton: {fileID: 4193200057788914683}
