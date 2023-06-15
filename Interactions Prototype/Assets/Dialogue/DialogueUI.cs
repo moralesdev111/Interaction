@@ -38,6 +38,16 @@ namespace RPG.UI
             {
                 Destroy(item.gameObject);
             }
+            foreach (string choiceText in playerConversant.GetChoices())
+            {
+                GameObject choiceInstance = Instantiate(choicePrefab, choiceRoot);
+                var textComp = choiceInstance.GetComponentInChildren<TextMeshProUGUI>();
+                textComp.text = choiceText;
+
+            }
+            
+                
+            
         }
     }
 }

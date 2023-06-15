@@ -38,7 +38,7 @@ public class ButtonProxy : MonoBehaviour
 
     {
 
-        
+        if (key < 0) return;
 
         if (Input.GetKeyDown("return"))
 
@@ -47,6 +47,12 @@ public class ButtonProxy : MonoBehaviour
             button.onClick?.Invoke();
 
         }
+        if (Input.GetKeyDown("escape"))
+        {
+
+
+        }
+
 
     }
 
