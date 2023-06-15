@@ -24,6 +24,14 @@ namespace RPG.Dialogue
             return currentNode.GetText();
         }
     
+        public IEnumerable<string> GetChoices()
+        {
+
+            yield return "I've been here all my life.";
+            yield return "Sorry I don't speak with strangers.";
+
+        }
+
         public void Next()
         {
             DialogueNode[] children = currentDialogue.GetAllChildren(currentNode).ToArray();
