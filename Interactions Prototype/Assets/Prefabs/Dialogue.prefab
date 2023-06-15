@@ -1104,6 +1104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AIText: {fileID: 2737755535696120624}
   nextButton: {fileID: 4193200057788914683}
+  AIResponse: {fileID: 2408315343608982158}
   choiceRoot: {fileID: 7002435237748642936}
   choicePrefab: {fileID: 272898296199740035, guid: 45d4aa1ebcb1aba488ab95436735cd6f, type: 3}
 --- !u!1001 &506693936556115119
