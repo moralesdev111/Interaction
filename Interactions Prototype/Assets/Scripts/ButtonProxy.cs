@@ -10,7 +10,8 @@ public class ButtonProxy : MonoBehaviour
 
 {
 
-    private Button button;
+    [SerializeField] Button nextButton;
+    
 
     private KeyCode key;
 
@@ -18,7 +19,7 @@ public class ButtonProxy : MonoBehaviour
 
     {
 
-        button = GetComponent<Button>();
+        nextButton = GetComponent<Button>();
 
     }
 
@@ -44,7 +45,7 @@ public class ButtonProxy : MonoBehaviour
 
         {
 
-            button.onClick?.Invoke();
+            nextButton.onClick?.Invoke();
 
         }
         if (Input.GetKeyDown("escape"))

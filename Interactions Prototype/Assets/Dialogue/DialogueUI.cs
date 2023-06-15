@@ -16,6 +16,7 @@ namespace RPG.UI
         [SerializeField] Transform choiceRoot;
         [SerializeField] GameObject choicePrefab;
         
+        
 
         // Start is called before the first frame update
         void Start()
@@ -39,18 +40,7 @@ namespace RPG.UI
             choiceRoot.gameObject.SetActive(playerConversant.IsChoosing());
             if(playerConversant.IsChoosing())
             {
-
-                 foreach (Transform item in choiceRoot)
-                {
-                    Destroy(item.gameObject);
-                }
-                foreach (DialogueNode choice in playerConversant.GetChoices())
-                {
-                    GameObject choiceInstance = Instantiate(choicePrefab, choiceRoot);
-                    var textComp = choiceInstance.GetComponentInChildren<TextMeshProUGUI>();
-                    textComp.text = choice.GetText();
-
-                }
+                BuildChoiceList();
             }
             else
             {
@@ -63,6 +53,29 @@ namespace RPG.UI
             
                 
             
+        }
+
+        private void BuildChoiceList()
+        {
+            foreach (Transform item in choiceRoot)
+            {
+                Destroy(item.gameObject);
+            }
+            foreach (DialogueNode choice in playerConversant.GetChoices())
+            {
+                GameObject choiceInstance = Instantiate(choicePrefab, choiceRoot);
+                var textComp = choiceInstance.GetComponentInChildren<TextMeshProUGUI>();
+                textComp.text = choice.GetText();
+                Button button = choiceInstance.GetComponentInChildren<Button>();
+                button.onClick.AddListener(()=>                
+                {
+
+                    playerConversant.SelectChoice(choice);
+                    UpdateUI();
+
+                });
+
+            }
         }
     }
 }
