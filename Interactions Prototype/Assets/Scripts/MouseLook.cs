@@ -22,8 +22,7 @@ public class MouseLook : MonoBehaviour
 
     void CursorSetting()
     {
-    Cursor.lockState = CursorLockMode.Locked;
-    Cursor.visible = false;
+    
     }
 
      void CameraInputAndRotation()

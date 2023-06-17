@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using RPG.Dialogue;
@@ -15,8 +15,6 @@ namespace RPG.UI
         [SerializeField] GameObject AIResponse;
         [SerializeField] Transform choiceRoot;
         [SerializeField] GameObject choicePrefab;
-        
-        
 
         // Start is called before the first frame update
         void Start()
@@ -35,10 +33,9 @@ namespace RPG.UI
 
         void UpdateUI()
         {
-            
             AIResponse.SetActive(!playerConversant.IsChoosing());
             choiceRoot.gameObject.SetActive(playerConversant.IsChoosing());
-            if(playerConversant.IsChoosing())
+            if (playerConversant.IsChoosing())
             {
                 BuildChoiceList();
             }
@@ -46,35 +43,23 @@ namespace RPG.UI
             {
                 AIText.text = playerConversant.GetText();
                 nextButton.gameObject.SetActive(playerConversant.HasNext());
-
-
             }
-           
-            
-                
-            
         }
 
         private void BuildChoiceList()
         {
-            foreach (Transform item in choiceRoot)
-            {
-                Destroy(item.gameObject);
-            }
+            choiceRoot.DetachChildren();
             foreach (DialogueNode choice in playerConversant.GetChoices())
             {
                 GameObject choiceInstance = Instantiate(choicePrefab, choiceRoot);
                 var textComp = choiceInstance.GetComponentInChildren<TextMeshProUGUI>();
                 textComp.text = choice.GetText();
                 Button button = choiceInstance.GetComponentInChildren<Button>();
-                button.onClick.AddListener(()=>                
+                button.onClick.AddListener(() => 
                 {
-
                     playerConversant.SelectChoice(choice);
                     UpdateUI();
-
                 });
-
             }
         }
     }

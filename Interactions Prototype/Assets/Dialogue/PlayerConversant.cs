@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -17,9 +17,7 @@ namespace RPG.Dialogue
 
         public bool IsChoosing()
         {
-
             return isChoosing;
-
         }
 
         public string GetText()
@@ -31,12 +29,10 @@ namespace RPG.Dialogue
 
             return currentNode.GetText();
         }
-    
+
         public IEnumerable<DialogueNode> GetChoices()
         {
-
-           return currentDialogue.GetPlayerChilren(currentNode);
-
+            return currentDialogue.GetPlayerChilren(currentNode);
         }
 
         public void SelectChoice(DialogueNode chosenNode)
@@ -44,15 +40,13 @@ namespace RPG.Dialogue
             currentNode = chosenNode;
             isChoosing = false;
             Next();
-            
-
         }
+    
         public void Next()
         {
             int numPlayerResponses = currentDialogue.GetPlayerChilren(currentNode).Count();
-            if(numPlayerResponses >0)
+            if (numPlayerResponses > 0)
             {
-
                 isChoosing = true;
                 return;
             }
