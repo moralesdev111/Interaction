@@ -310,7 +310,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 58744114}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32.455, y: 1.06, z: 141.47372}
+  m_LocalPosition: {x: 31.13, y: 1.06, z: 142.38}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -950,6 +950,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 646676858651214029, guid: 6eedbbb1e19c46f4a924381168b9ac0e, type: 3}
+      propertyPath: testDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 1254d6e998f388e43bceebc97842f2c1, type: 2}
     - target: {fileID: 4249131635738138146, guid: 6eedbbb1e19c46f4a924381168b9ac0e, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -6696,6 +6700,7 @@ GameObject:
   - component: {fileID: 2070106908}
   - component: {fileID: 2070106907}
   - component: {fileID: 2070106906}
+  - component: {fileID: 2070106909}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -6733,11 +6738,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 6, y: 2, z: 6}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2070106907
 MeshRenderer:
@@ -6789,6 +6794,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2070106904}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2070106909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070106904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b8a7cc3af653a044830e7b594cb6edd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 11400000, guid: 1254d6e998f388e43bceebc97842f2c1, type: 2}
 --- !u!4 &2089594762 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1311534305500314048, guid: 1850815f38acaab4085c2fb6a7ca2928, type: 3}

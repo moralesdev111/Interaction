@@ -1,4 +1,5 @@
-﻿﻿using System.Collections;
+﻿﻿﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -7,12 +8,32 @@ namespace RPG.Dialogue
 {
     public class PlayerConversant : MonoBehaviour
     {
-        [SerializeField] Dialogue currentDialogue;
+        
+        Dialogue currentDialogue;
         DialogueNode currentNode = null;
         bool isChoosing = false;
 
-        private void Awake() {
+        public event Action onConversationUpdated;
+
+        
+        public void StartDialogue(Dialogue newDialogue)
+        {
+            currentDialogue = newDialogue;
             currentNode = currentDialogue.GetRootNode();
+            onConversationUpdated();
+        }
+        public void Quit()
+        {
+            currentDialogue = null;
+            currentNode = null;
+            isChoosing = false;
+            onConversationUpdated();
+
+        }
+
+        public bool IsActive()
+        {
+            return currentDialogue != null;
         }
 
         public bool IsChoosing()
@@ -48,12 +69,14 @@ namespace RPG.Dialogue
             if (numPlayerResponses > 0)
             {
                 isChoosing = true;
+                onConversationUpdated();
                 return;
             }
 
             DialogueNode[] children = currentDialogue.GetAIChildren(currentNode).ToArray();
-            int randomIndex = Random.Range(0, children.Count());
+            int randomIndex = UnityEngine.Random.Range(0, children.Count());
             currentNode = children[randomIndex];
+            onConversationUpdated();
         }
 
         public bool HasNext()
