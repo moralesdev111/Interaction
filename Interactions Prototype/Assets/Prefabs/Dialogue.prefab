@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 4193200057788914683}
   - component: {fileID: 9089871168186536530}
   - component: {fileID: 6220311038418613454}
-  - component: {fileID: 4991789780610444983}
   m_Layer: 5
   m_Name: Next Button
   m_TagString: Untagged
@@ -141,7 +140,7 @@ MonoBehaviour:
     m_Left: 0
     m_Right: 0
     m_Top: 0
-    m_Bottom: 0
+    m_Bottom: 20
   m_ChildAlignment: 0
   m_Spacing: 0
   m_ChildForceExpandWidth: 0
@@ -171,19 +170,6 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
---- !u!114 &4991789780610444983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 211392899473792583}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecebb10092fc59846b192587cbe0f07b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextButton: {fileID: 0}
 --- !u!1 &672199871424415722
 GameObject:
   m_ObjectHideFlags: 0

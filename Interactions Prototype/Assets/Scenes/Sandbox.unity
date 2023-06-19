@@ -295,6 +295,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 58744115}
+  - component: {fileID: 58744116}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -318,6 +319,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &58744116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 58744114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b8a7cc3af653a044830e7b594cb6edd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 11400000, guid: 1254d6e998f388e43bceebc97842f2c1, type: 2}
+  playerController: {fileID: 1010023363}
 --- !u!1 &61624907
 GameObject:
   m_ObjectHideFlags: 0
@@ -1244,6 +1259,31 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9051238300485817969, guid: 2f6c4572e07a60b43b00e1c4f489a806, type: 3}
   m_PrefabInstance: {fileID: 284612094}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &288694300 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6566375313597125432, guid: 522ae3310cfb82443bcfac73ba06e7b2, type: 3}
+  m_PrefabInstance: {fileID: 2203291426633471079}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &288694303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288694300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 0
+  m_MinWidth: -1
+  m_MinHeight: -1
+  m_PreferredWidth: -1
+  m_PreferredHeight: 10
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!1001 &291433406
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2730,7 +2770,7 @@ GameObject:
   - component: {fileID: 756447241}
   - component: {fileID: 756447245}
   m_Layer: 5
-  m_Name: UICanvas
+  m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6710,7 +6750,6 @@ GameObject:
   - component: {fileID: 2070106908}
   - component: {fileID: 2070106907}
   - component: {fileID: 2070106906}
-  - component: {fileID: 2070106909}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -6804,20 +6843,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2070106904}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &2070106909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2070106904}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b8a7cc3af653a044830e7b594cb6edd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: 1254d6e998f388e43bceebc97842f2c1, type: 2}
-  playerController: {fileID: 1010023363}
 --- !u!4 &2089594762 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1311534305500314048, guid: 1850815f38acaab4085c2fb6a7ca2928, type: 3}
@@ -6915,6 +6940,22 @@ PrefabInstance:
     - target: {fileID: 5408567497452799409, guid: 522ae3310cfb82443bcfac73ba06e7b2, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5590290983383970899, guid: 522ae3310cfb82443bcfac73ba06e7b2, type: 3}
+      propertyPath: m_Spacing
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5590290983383970899, guid: 522ae3310cfb82443bcfac73ba06e7b2, type: 3}
+      propertyPath: m_Padding.m_Bottom
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110435178998546734, guid: 522ae3310cfb82443bcfac73ba06e7b2, type: 3}
+      propertyPath: m_Padding.m_Top
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6220311038418613454, guid: 522ae3310cfb82443bcfac73ba06e7b2, type: 3}
+      propertyPath: m_PreferredHeight
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 6618521647515594892, guid: 522ae3310cfb82443bcfac73ba06e7b2, type: 3}
       propertyPath: m_AnchorMax.y
@@ -7096,11 +7137,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialogue
       objectReference: {fileID: 0}
+    - target: {fileID: 9089871168186536530, guid: 522ae3310cfb82443bcfac73ba06e7b2, type: 3}
+      propertyPath: m_Padding.m_Top
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4991789780610444983, guid: 522ae3310cfb82443bcfac73ba06e7b2, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6566375313597125432, guid: 522ae3310cfb82443bcfac73ba06e7b2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 288694303}
   m_SourcePrefab: {fileID: 100100000, guid: 522ae3310cfb82443bcfac73ba06e7b2, type: 3}
 --- !u!224 &2203291426633471080 stripped
 RectTransform:
