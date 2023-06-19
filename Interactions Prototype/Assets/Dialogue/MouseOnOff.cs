@@ -4,23 +4,24 @@ using UnityEngine;
 
 public class MouseOnOff : MonoBehaviour
 {
-    [SerializeField ]GameObject UI;
-    
-    void Start()
-    {
-        
-    }
-
+    [SerializeField] GameObject UI;    
     
     void Update()
     {
-        if(UI.activeInHierarchy == false)
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-    Cursor.visible = false;
+        MouseOnOffControl();
+    }
+
+    void MouseOnOffControl()
+    {
+        if(!UI.gameObject.activeSelf)
+        {            
+            Cursor.visible = false;
         }
 
         
-        else return;
+        else 
+        {
+            Cursor.visible = true;
+        }
     }
 }

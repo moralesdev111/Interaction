@@ -2832,7 +2832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c9b13edecbe8ba499faca8b9c0d2727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UI: {fileID: 756447240}
+  UI: {fileID: 990869730}
 --- !u!1001 &765399311
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3238,14 +3238,19 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff62b58c5a9ea164fa8ddf8038e10cd1, type: 3}
+--- !u!1 &990869730 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8973661639541049825, guid: 522ae3310cfb82443bcfac73ba06e7b2, type: 3}
+  m_PrefabInstance: {fileID: 2203291426633471079}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &996286177 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1025681519537473006, guid: aa99a810914c5b84b9bc5d51f95dd05c, type: 3}
   m_PrefabInstance: {fileID: 165356536}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1010023357 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8919629740983521158, guid: 6eedbbb1e19c46f4a924381168b9ac0e, type: 3}
+--- !u!4 &1010023363 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4249131635738138146, guid: 6eedbbb1e19c46f4a924381168b9ac0e, type: 3}
   m_PrefabInstance: {fileID: 199347129}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1010694098
@@ -6743,11 +6748,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 7, y: 2, z: 7}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2070106907
 MeshRenderer:
@@ -6812,7 +6817,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: {fileID: 11400000, guid: 1254d6e998f388e43bceebc97842f2c1, type: 2}
-  playerController: {fileID: 1010023357}
+  playerController: {fileID: 1010023363}
 --- !u!4 &2089594762 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1311534305500314048, guid: 1850815f38acaab4085c2fb6a7ca2928, type: 3}
