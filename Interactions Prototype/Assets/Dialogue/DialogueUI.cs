@@ -42,6 +42,7 @@ namespace RPG.UI
             if (playerConversant.IsChoosing())
             {
                 BuildChoiceList();
+                nextButton.gameObject.SetActive(!playerConversant.HasNext());
             }
             else
             {

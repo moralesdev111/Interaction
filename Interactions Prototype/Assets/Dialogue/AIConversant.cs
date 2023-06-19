@@ -5,33 +5,25 @@ using UnityEngine;
 namespace RPG.Dialogue
 {
 public class AIConversant : MonoBehaviour
-{
-    
+{    
 [SerializeField] Dialogue dialogue = null;
-[SerializeField] GameObject playerController;
+[SerializeField] Transform playerController;
 
-
-
-
-
-     void OnTriggerStay(Collider other) 
-   {
-    if(other.gameObject.tag == "Player")
-    {
-        
+private void Update() 
+{
+   float distance = Vector3.Distance(transform.position, playerController.position);
+    if (distance <= 7f)
+      {           
         if(Input.GetKeyDown(KeyCode.E))
-        {
-            if(dialogue == null)
-
+        {        
            playerController.GetComponent<PlayerConversant>().StartDialogue(dialogue);
-
         }
-        }
-   }
- 
-    
+      }
   
- }
-
+    }
+  }
 }
+
+
+
 
