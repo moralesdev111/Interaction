@@ -37,7 +37,7 @@ namespace RPG.UI
             {
                 return;
             }
-            AIResponse.SetActive(!playerConversant.IsChoosing());
+            AIResponse.SetActive(true);
             choiceRoot.gameObject.SetActive(playerConversant.IsChoosing());
             if (playerConversant.IsChoosing())
             {

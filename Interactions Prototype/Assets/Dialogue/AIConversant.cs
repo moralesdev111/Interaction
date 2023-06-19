@@ -8,19 +8,29 @@ public class AIConversant : MonoBehaviour
 {
     
 [SerializeField] Dialogue dialogue = null;
-   void OnTriggerEnter(Collider other) 
- {
+[SerializeField] GameObject playerController;
+
+
+
+
+
+     void OnTriggerStay(Collider other) 
+   {
     if(other.gameObject.tag == "Player")
     {
         
         if(Input.GetKeyDown(KeyCode.E))
         {
+            if(dialogue == null)
 
-            GetComponent<PlayerConversant>().StartDialogue(dialogue);
+           playerController.GetComponent<PlayerConversant>().StartDialogue(dialogue);
 
         }
         }
- } 
+   }
+ 
+    
+  
  }
 
 }

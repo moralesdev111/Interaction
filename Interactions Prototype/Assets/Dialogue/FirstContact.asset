@@ -240,8 +240,8 @@ MonoBehaviour:
   children: []
   rect:
     serializedVersion: 2
-    x: 997
-    y: 110
+    x: 1051
+    y: 147
     width: 200
     height: 100
   isPlayerSpeaking: 0
