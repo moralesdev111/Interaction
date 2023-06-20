@@ -1,4 +1,4 @@
-﻿﻿using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -83,6 +83,7 @@ namespace RPG.Dialogue
     
         public void Next()
         {
+            
             int numPlayerResponses = currentDialogue.GetPlayerChilren(currentNode).Count();
             if (numPlayerResponses > 0)
             {
@@ -93,11 +94,17 @@ namespace RPG.Dialogue
             }
 
             DialogueNode[] children = currentDialogue.GetAIChildren(currentNode).ToArray();
-            int randomIndex = UnityEngine.Random.Range(0, children.Count());
-            
-            currentNode = children[randomIndex];
-            
-            onConversationUpdated();
+            if(children.Length > 0)
+            {
+                
+                currentNode = children[UnityEngine.Random.Range(0, children.Count())];
+                
+                onConversationUpdated();
+            }
+            else
+            {
+                Quit();
+            }
         }
 
         public bool HasNext()
