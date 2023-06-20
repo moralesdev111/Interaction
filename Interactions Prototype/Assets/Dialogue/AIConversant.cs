@@ -8,6 +8,8 @@ public class AIConversant : MonoBehaviour
 {    
 [SerializeField] Dialogue dialogue = null;
 [SerializeField] Transform playerController;
+ [SerializeField] string conversantName;
+
 
 private void Update() 
 {
@@ -16,11 +18,15 @@ private void Update()
       {           
         if(Input.GetKeyDown(KeyCode.E))
         {        
-           playerController.GetComponent<PlayerConversant>().StartDialogue(dialogue);
+           playerController.GetComponent<PlayerConversant>().StartDialogue(this, dialogue);
         }
       }
   
     }
+            public string GetName()
+        {
+            return conversantName;
+        }
   }
 }
 

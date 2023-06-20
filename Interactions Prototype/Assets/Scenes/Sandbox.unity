@@ -333,6 +333,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: {fileID: 11400000, guid: 1254d6e998f388e43bceebc97842f2c1, type: 2}
   playerController: {fileID: 1010023363}
+  conversantName: Pedro
 --- !u!1 &61624907
 GameObject:
   m_ObjectHideFlags: 0
@@ -965,6 +966,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 646676858651214029, guid: 6eedbbb1e19c46f4a924381168b9ac0e, type: 3}
+      propertyPath: playerName
+      value: Luis
+      objectReference: {fileID: 0}
     - target: {fileID: 646676858651214029, guid: 6eedbbb1e19c46f4a924381168b9ac0e, type: 3}
       propertyPath: testDialogue
       value: 
@@ -5536,6 +5541,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9051238300485817969, guid: 2f6c4572e07a60b43b00e1c4f489a806, type: 3}
   m_PrefabInstance: {fileID: 1727046932}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1755656876 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2903106363956262794, guid: 522ae3310cfb82443bcfac73ba06e7b2, type: 3}
+  m_PrefabInstance: {fileID: 2203291426633471079}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1763660531 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5614180682871420595, guid: 2196e66c52d25ac469e55fb8f4d54d4a, type: 3}
@@ -6921,6 +6937,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3175793725499776221, guid: 522ae3310cfb82443bcfac73ba06e7b2, type: 3}
+      propertyPath: conversantName
+      value: 
+      objectReference: {fileID: 1755656876}
     - target: {fileID: 5408567497452799409, guid: 522ae3310cfb82443bcfac73ba06e7b2, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

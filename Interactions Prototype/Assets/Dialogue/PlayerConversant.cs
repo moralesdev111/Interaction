@@ -1,4 +1,4 @@
-﻿﻿﻿using System;
+﻿﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,27 +8,32 @@ namespace RPG.Dialogue
 {
     public class PlayerConversant : MonoBehaviour
     {
-        
+        [SerializeField] string playerName;
+
         Dialogue currentDialogue;
         DialogueNode currentNode = null;
+        AIConversant currentConversant = null;
         bool isChoosing = false;
 
         public event Action onConversationUpdated;
 
-        
-        public void StartDialogue(Dialogue newDialogue)
+        public void StartDialogue(AIConversant newConversant, Dialogue newDialogue)
         {
+            currentConversant = newConversant;
             currentDialogue = newDialogue;
             currentNode = currentDialogue.GetRootNode();
+            
             onConversationUpdated();
         }
+
         public void Quit()
         {
             currentDialogue = null;
+            
             currentNode = null;
             isChoosing = false;
+            currentConversant = null;
             onConversationUpdated();
-
         }
 
         public bool IsActive()
@@ -51,6 +56,18 @@ namespace RPG.Dialogue
             return currentNode.GetText();
         }
 
+        public string GetCurrentConversantName()
+        {
+            if (isChoosing)
+            {
+                return playerName;
+            }
+            else
+            {
+                return currentConversant.GetName();
+            }
+        }
+
         public IEnumerable<DialogueNode> GetChoices()
         {
             return currentDialogue.GetPlayerChilren(currentNode);
@@ -59,6 +76,7 @@ namespace RPG.Dialogue
         public void SelectChoice(DialogueNode chosenNode)
         {
             currentNode = chosenNode;
+            
             isChoosing = false;
             Next();
         }
@@ -69,13 +87,16 @@ namespace RPG.Dialogue
             if (numPlayerResponses > 0)
             {
                 isChoosing = true;
+                
                 onConversationUpdated();
                 return;
             }
 
             DialogueNode[] children = currentDialogue.GetAIChildren(currentNode).ToArray();
             int randomIndex = UnityEngine.Random.Range(0, children.Count());
+            
             currentNode = children[randomIndex];
+            
             onConversationUpdated();
         }
 
@@ -83,5 +104,7 @@ namespace RPG.Dialogue
         {
             return currentDialogue.GetAllChildren(currentNode).Count() > 0;
         }
+
+        
     }
 }

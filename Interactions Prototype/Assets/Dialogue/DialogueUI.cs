@@ -16,6 +16,7 @@ namespace RPG.UI
         [SerializeField] Transform choiceRoot;
         [SerializeField] GameObject choicePrefab;
         [SerializeField] Button quitButton;
+        [SerializeField] TextMeshProUGUI conversantName;
 
         // Start is called before the first frame update
         void Start()
@@ -28,8 +29,6 @@ namespace RPG.UI
             UpdateUI();
         }
 
-       
-
         void UpdateUI()
         {
             gameObject.SetActive(playerConversant.IsActive());
@@ -37,12 +36,12 @@ namespace RPG.UI
             {
                 return;
             }
-            AIResponse.SetActive(true);
+            conversantName.text = playerConversant.GetCurrentConversantName();
+            AIResponse.SetActive(!playerConversant.IsChoosing());
             choiceRoot.gameObject.SetActive(playerConversant.IsChoosing());
             if (playerConversant.IsChoosing())
             {
                 BuildChoiceList();
-                nextButton.gameObject.SetActive(!playerConversant.HasNext());
             }
             else
             {
