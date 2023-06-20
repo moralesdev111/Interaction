@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 0
+    m_Top: 20
     m_Bottom: 20
   m_ChildAlignment: 0
   m_Spacing: 0
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_MinWidth: -1
   m_MinHeight: -1
   m_PreferredWidth: 103.2
-  m_PreferredHeight: 30.1
+  m_PreferredHeight: 40
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
@@ -360,7 +360,7 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 10
+    m_Top: 20
     m_Bottom: 0
   m_ChildAlignment: 0
   m_Spacing: 5
@@ -744,6 +744,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3193497230392182996}
   - component: {fileID: 368671034386151043}
+  - component: {fileID: 269407460478437344}
   m_Layer: 5
   m_Name: ButtonRow
   m_TagString: Untagged
@@ -798,6 +799,26 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &269407460478437344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6566375313597125432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 0
+  m_MinWidth: -1
+  m_MinHeight: -1
+  m_PreferredWidth: -1
+  m_PreferredHeight: 10
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!1 &6875687342732853292
 GameObject:
   m_ObjectHideFlags: 0
@@ -1033,9 +1054,9 @@ MonoBehaviour:
     m_Left: 0
     m_Right: 0
     m_Top: 0
-    m_Bottom: 0
+    m_Bottom: 20
   m_ChildAlignment: 0
-  m_Spacing: 20
+  m_Spacing: 30
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
@@ -1095,6 +1116,7 @@ MonoBehaviour:
   choiceRoot: {fileID: 7002435237748642936}
   choicePrefab: {fileID: 272898296199740035, guid: 45d4aa1ebcb1aba488ab95436735cd6f, type: 3}
   quitButton: {fileID: 8760090898501970414}
+  conversantName: {fileID: 2903106363956262794}
 --- !u!1001 &506693936556115119
 PrefabInstance:
   m_ObjectHideFlags: 0
